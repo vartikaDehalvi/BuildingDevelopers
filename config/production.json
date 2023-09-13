@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://dehalvivartika2112:password12345@cluster0.ifuqbzl.mongodb.net/buildDev?retryWrites=true&w=majority",
+    "jwtSecret": "135secretJWToken",
+    "githubClientId": "58685cbd1c092a4f5b13",
+    "githhubClientSecret":"c89bf90862e5a94dbbf226c53b000192766c0998"
+   }
