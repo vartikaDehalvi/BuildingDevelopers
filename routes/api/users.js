@@ -31,14 +31,11 @@ router.post(
 
 		try {
 			/* Default Settings for images*/
-			const avatar = normalize(
-				gravatar.url(email, {
-					s: '200', //default size
-					r: 'pg', //default rating
-					d: 'mm', //default image
-				}),
-				{ forceHttps: true }
-			);
+			const avatar = gravatar.url(email, {
+				s: '200', //default size
+				r: 'pg', //default rating
+				d: 'mm', //default image
+			});
 
 			let user = await UserModel.findOne({ email });
 			//user existance check
