@@ -21,8 +21,8 @@ const Dashboard = ({
 	return loading && profile === null ? (
 		<Spinner />
 	) : (
-		<div>
-			<div style={{ margin: '8rem 10% 0 10%' }}>
+		<>
+			<div className="welcome">
 				<h1 className="large text-primary">Dashboard</h1>
 				<p className="lead" style={{ display: 'flex', alignItems: 'center' }}>
 					<button onClick={() => deleteAccount()} className="delete">
@@ -55,8 +55,6 @@ const Dashboard = ({
 									'@media (max-width: 850px)': {
 										width: '100%',
 									},
-									width: '46%',
-									padding: '2%',
 								}}
 							>
 								{' '}
@@ -68,8 +66,6 @@ const Dashboard = ({
 									'@media (max-width: 850px)': {
 										width: '100%',
 									},
-									width: '46%',
-									padding: '2%',
 								}}
 							>
 								{' '}
@@ -107,7 +103,7 @@ const Dashboard = ({
 					</>
 				)}
 			</div>
-		</div>
+		</>
 	);
 };
 

@@ -23,7 +23,7 @@ const Profile = ({ getProfileById, auth, profile: { loading, profile } }) => {
 	}
 
 	return (
-		<div style={{ margin: '9%' }}>
+		<div className="profile-container">
 			{profile === null || loading ? (
 				<Spinner />
 			) : (

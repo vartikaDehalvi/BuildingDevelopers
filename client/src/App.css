@@ -609,7 +609,14 @@ td {
 	box-shadow: 5px 5px 5px rgba(73, 31, 107, 0.5);
 	border: 3px solid rgba(255, 255, 255, 0.178);
 	background: #27144b44;
+	width: 46%;
+	padding: 2%;
 }
+
+.welcome {
+	margin: 8rem 10% 0 10%;
+}
+
 /* Posts Page */
 .post-form .post-form-header {
 	background: var(--primary-color);
@@ -654,12 +661,46 @@ td {
 	.credentials {
 		display: block;
 		align-items: center;
-		width: 100%;
+		width: 90%;
 	}
 
+	.profile-container {
+		margin-top: 24%;
+		font-size: 80%;
+	}
 	.edu-cred,
 	.exp-cred {
 		width: 100%;
+	}
+
+	.dash-buttons > .btn {
+		font-size: 80%;
+	}
+
+	.welcome {
+		margin-top: 8rem;
+	}
+
+	/* Text Styles */
+	.x-large {
+		font-size: 2.4rem;
+	}
+
+	.large {
+		font-size: 1.7rem;
+	}
+
+	.lead {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 740px) {
+	.dash-buttons > .btn {
+		font-size: 77%;
+	}
+	.dash-buttons {
+		display: block;
 	}
 }
 
