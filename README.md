@@ -39,7 +39,7 @@ To use Build Dev, follow these steps:
 
 - Register an account and log in to access the dashboard.
 - Create and manage your developer profile, including education, experience, and social links.
-- Create, like, and comment on posts.
+- Create, like, and comment on posts or delete your post.
 - Explore the About page to learn more about the company.
 
 ## Contributing
@@ -62,7 +62,15 @@ To get started with Build Dev:
 - Install the dependencies for the client (React): `npm install`
 - Return to the project root: `cd ..`
 - Start the server and client concurrently: `npm run dev`
+  
+  ## Key Dependencies
 
-<!-- update the proxy setting in  client's `package.json` to point to the deployed URL.
-```json
-"proxy": "https://heroku-app-url.herokuapp.com" -->
+  Build Dev relies on several key libraries and packages:
+
+- [Express](https://expressjs.com/): A web framework for Node.js used for building the server.
+- [React](https://reactjs.org/): A JavaScript library used for building the client-side user interface.
+- [MongoDB](https://www.mongodb.com/): A NoSQL database used for data storage.
+
+You can find a full list of project dependencies in the `package.json` files for the server and client components.
+
+
