@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 
 import { deleteComment } from '../../actions/post';
-import { type } from 'os';
 
 const CommentItem = ({
 	postId,
