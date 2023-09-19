@@ -1,6 +1,8 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 import { check, validationResult } from 'express-validator';
-import config from 'config';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
@@ -64,7 +66,7 @@ router.post(
 			//sign with token
 			jwt.sign(
 				payload,
-				config.get('jwtSecret'),
+				process.env.JWT_SECRET,
 				{ expiresIn: 3600 },
 				(err, token) => {
 					if (err) throw err;
