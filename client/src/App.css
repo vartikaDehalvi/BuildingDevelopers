@@ -672,6 +672,9 @@ td {
 		display: none;
 		position: relative;
 	}
+	.buttons > a {
+		font-size: 80%;
+	}
 }
 
 @media (max-width: 500px) {

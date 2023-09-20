@@ -53,7 +53,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 			</li>
 			<li>
 				<Link className="a" to="/aboutPage">
-					About Us
+					About
 				</Link>
 			</li>
 		</ul>
