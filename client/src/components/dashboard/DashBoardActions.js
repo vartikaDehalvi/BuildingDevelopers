@@ -16,7 +16,7 @@ const DashBoardActions = () => {
 					}}
 				>
 					<i
-						class="fas fa-user-circle text-primary"
+						class="fas fa-user-circle text-primary dash-i"
 						style={{ color: '#2c0b3f' }}
 					></i>{' '}
 					Edit Profile

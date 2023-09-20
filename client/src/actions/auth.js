@@ -55,13 +55,13 @@ export const register =
 			dispatch(loadUser()); // So it runs immediately
 
 			// Check if a success message is included in the response
-			if (res.data.message) {
-				dispatch(setAlert(res.data.message, 'success')); // Dispatch success alert
+			if (res.data.msg) {
+				dispatch(setAlert(res.data.msg, 'success')); // Dispatch success alert
 			}
 		} catch (err) {
 			const errors = err.response.data.errors;
 			if (errors) {
-				errors.forEach((error) => dispatch(setAlert(error.message, 'danger')));
+				errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
 			}
 
 			dispatch({ type: REGISTER_FAIL });

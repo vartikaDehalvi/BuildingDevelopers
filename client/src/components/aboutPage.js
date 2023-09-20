@@ -8,7 +8,7 @@ export const AboutPage = () => {
 			</h1>
 
 			<h3>
-				Welcome to Tech Build Dev: Where Ideas Become Reality. We are passionate
+				Welcome to Build Dev: Where Ideas Become Reality. We are passionate
 				about technology and driven by innovation. Whether you're an experienced
 				developer looking to stay ahead in the ever-evolving tech landscape or a
 				newcomer eager to explore the world of programming, you've come to the
@@ -73,7 +73,10 @@ export const AboutPage = () => {
 				introduction to fit the specific focus and goals of your developer's
 				page or website. It aims to provide an inviting and informa
 				<h2 style={{ textAlign: 'center', margin: '3% 0' }}>Our Services </h2>
-				<div style={{ display: 'flex', marginBottom: '5%' }}>
+				<div
+					className="services"
+					style={{ display: 'flex', marginBottom: '5%' }}
+				>
 					<div style={{ width: '50%' }}>
 						Our Services At BuildDev, we offer a wide range of services to help
 						you succeed in your development journey: - Web Development: From

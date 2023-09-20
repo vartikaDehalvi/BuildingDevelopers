@@ -26,6 +26,11 @@ body {
 	background-repeat: repeat;
 }
 
+.alert-undefined {
+	background-color: rgba(0, 0, 0, 0);
+	color: #0077b5;
+}
+
 a {
 	color: var(--primary-color);
 	text-decoration: none;
@@ -171,16 +176,12 @@ p {
 	color: #333;
 }
 
-.alert-class {
-	margin: 5% 7%;
-}
-
 .alert {
 	padding: 0.8rem;
 	width: 100%;
 	opacity: 0.9;
-	background: var(--light-color);
-	color: #333;
+	color: #24053d;
+	font-size: xx-large;
 	text-align: center;
 	border-radius: 5px;
 	margin-top: 1%;
@@ -503,6 +504,10 @@ td {
 }
 
 /* Profile Page */
+.profile-container {
+	margin: 7%;
+}
+
 .profile-grid {
 	display: grid;
 	grid-template-areas:
@@ -653,6 +658,83 @@ td {
 }
 
 /* Media Queries */
+@media (max-width: 400px) {
+	.profile-container {
+		position: absolute;
+		top: 15%;
+		margin: 0;
+	}
+	body {
+		overflow-x: hidden;
+		font-size: 60%;
+	}
+	.dash-i {
+		display: none;
+		position: relative;
+	}
+}
+
+@media (max-width: 500px) {
+	body {
+		font-size: 100%;
+		line-height: 200%;
+	}
+
+	section.register-form-container {
+		margin-top: 30%;
+	}
+
+	.btn {
+		/* font-size: 1rem !important; */
+		padding: 0.3rem;
+	}
+
+	.credentials {
+		display: block;
+		align-items: center;
+		width: 90%;
+	}
+
+	.profile-container {
+		position: absolute;
+		top: 10%;
+		width: 100%;
+		margin: 0;
+		overflow-x: hidden;
+	}
+	.edu-cred,
+	.exp-cred {
+		width: 100%;
+	}
+
+	.dash-buttons > .btn {
+		font-size: 80%;
+		flex-direction: column;
+		width: 200%;
+	}
+
+	.welcome {
+		margin-top: 8rem;
+	}
+
+	.exp-edu-container {
+		flex-direction: column;
+		width: 200%;
+	}
+
+	/* Text Styles */
+	.x-large {
+		font-size: 2.4rem;
+	}
+
+	.large {
+		font-size: 1.7rem;
+	}
+
+	.lead {
+		font-size: 0.8rem;
+	}
+}
 
 @media (max-width: 850px) {
 	.alert-class {
@@ -668,13 +750,22 @@ td {
 		margin-top: 24%;
 		font-size: 80%;
 	}
+
+	.container {
+		margin: -5%;
+	}
 	.edu-cred,
 	.exp-cred {
 		width: 100%;
+		font-size: 100%;
 	}
 
 	.dash-buttons > .btn {
-		font-size: 80%;
+		font-size: 100%;
+		line-height: 110%;
+		width: 100% !important;
+		display: block;
+		margin-bottom: 3%;
 	}
 
 	.welcome {
@@ -699,18 +790,21 @@ td {
 	.dash-buttons > .btn {
 		font-size: 77%;
 	}
-	.dash-buttons {
-		display: block;
+
+	.services {
+		flex-direction: column;
+		width: 200%;
+	}
+
+	.profile-container {
+		margin-top: 20%;
+		font-size: 80%;
 	}
 }
 
 @media (max-width: 950px) {
 	.container {
 		margin-top: 8rem;
-	}
-
-	.alert-class {
-		margin: 13%;
 	}
 
 	.hide-sm {
@@ -723,7 +817,7 @@ td {
 	}
 
 	.large {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.lead {
@@ -785,6 +879,10 @@ td {
 		width: 100%;
 		margin-bottom: 0.2rem;
 		color: #2c0b3f;
+	}
+
+	table {
+		width: 100%;
 	}
 
 	.post {

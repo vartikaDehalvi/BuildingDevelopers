@@ -35,9 +35,7 @@ const App = () => {
 		<Provider store={store}>
 			<Router>
 				<Navbar />
-				<div className="alert-class">
-					<Alert />
-				</div>
+
 				<Routes>
 					<Route path="/" element={<Landing />}></Route>
 					<Route path="/register" element={<Register />}></Route>

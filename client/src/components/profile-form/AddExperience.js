@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 
 import { addExperience } from '../../actions/profile';
 
@@ -24,6 +24,8 @@ const AddExperience = ({ addExperience }) => {
 	const onchange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 
+	const alerts = useSelector((state) => state.alert);
+
 	return (
 		<>
 			<section class="register-form-container">
@@ -41,6 +43,11 @@ const AddExperience = ({ addExperience }) => {
 							addExperience(formData, navigate);
 						}}
 					>
+						{alerts.map((alert) => (
+							<div key={alert.id} className={`alert alert-${alert.alertType}`}>
+								{alert.msg}
+							</div>
+						))}
 						<div class="register-form-group">
 							<input
 								value={title}

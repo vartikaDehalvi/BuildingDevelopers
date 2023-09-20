@@ -53,6 +53,7 @@ const Profile = ({ getProfileById, auth, profile: { loading, profile } }) => {
 						</div>
 
 						<div
+							className="exp-edu-container"
 							style={{
 								display: 'flex',
 								justifyContent: 'center',

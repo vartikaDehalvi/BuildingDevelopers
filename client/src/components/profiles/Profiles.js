@@ -11,7 +11,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 		getProfiles();
 	}, [getProfiles]);
 	return (
-		<>
+		<div className="developer-container">
 			{loading ? (
 				<Spinner />
 			) : (
@@ -39,7 +39,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 					</div>
 				</div>
 			)}
-		</>
+		</div>
 	);
 };
 

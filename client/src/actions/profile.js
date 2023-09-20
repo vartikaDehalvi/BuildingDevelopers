@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { setAlert } from './alert';
+
 import {
 	GET_PROFILE,
 	GET_PROFILES,
@@ -7,7 +8,6 @@ import {
 	UPDATE_PROFILE,
 	CLEAR_PROFILE,
 	ACCOUNT_DELETED,
-	GET_REPOS,
 } from './types';
 
 //Get current user's profile

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -60,6 +60,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 		navigate('/dashboard');
 	}
 
+	const alerts = useSelector((state) => state.alert);
+
 	return (
 		<>
 			<section className="register-form-container ">
@@ -69,6 +71,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						<i className="fas fa-user"></i> Create Your Account
 					</p>
 					<form className="form" onSubmit={(e) => onSubmit(e)}>
+						{alerts.map((alert) => (
+							<div key={alert.id} className={`alert alert-${alert.alertType}`}>
+								{alert.msg}
+							</div>
+						))}
 						<div className="group-container">
 							<div className="register-form-group">
 								<input

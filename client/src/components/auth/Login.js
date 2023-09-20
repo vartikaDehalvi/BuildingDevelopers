@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useNavigate } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 
 import { login } from '../../actions/auth';
 import Spinner from '../layout/Spinner';
@@ -32,6 +32,9 @@ const Login = ({ login, isAuthenticated }) => {
 	if (isAuthenticated) {
 		navigate('/dashboard');
 	}
+
+	const alerts = useSelector((state) => state.alert);
+
 	return (
 		<section className="register-form-container">
 			<div className="inner-section">
@@ -40,6 +43,11 @@ const Login = ({ login, isAuthenticated }) => {
 					<i className="fas fa-user"></i> Sign In to your account
 				</p>
 				<form className="form" onSubmit={(e) => onSubmit(e)}>
+					{alerts.map((alert) => (
+						<div key={alert.id} className={`alert alert-${alert.alertType}`}>
+							{alert.msg}
+						</div>
+					))}
 					<div className="register-form-group">
 						<input
 							type="email"
