@@ -14,7 +14,6 @@ This README file will guide you through using the project.
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Installation](#installation)
 
 ## Features
