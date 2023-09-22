@@ -36,8 +36,8 @@ Before you begin, ensure you have met the following requirements:
 
 To use Build Dev, follow these steps:
 
-- Register an account and log in to access the dashboard.
-- Create and manage your developer profile, including education, experience, and social links.
+- Register an account or log in to access the dashboard.
+- Create and manage your profile, including education, experience and social links and also view other's profile.
 - Create, like, and comment on posts or delete your post.
 - Explore the About page to learn more about the company.
 
