@@ -21,16 +21,17 @@ router.get('/', auth, async (req, res) => {
 	}
 });
 
+//LOGIN
 router.post(
 	'/',
-	/*validation middleware*/
+	/*express-validation middleware*/
 	[
 		check('email', 'Email is required').isEmail(),
 		check('password', 'Password is required').exists(),
 	],
 
 	async (req, res) => {
-		const errors = validationResult(req);
+		const errors = validationResult(req); //if errors- collect them, if no errors- return empty object
 		if (!errors.isEmpty()) {
 			return res.status(400).json({ errors: errors.array() });
 		}
@@ -40,6 +41,7 @@ router.post(
 
 		try {
 			let user = await UserModel.findOne({ email });
+
 			//user existence check
 			if (!user) {
 				return res
@@ -47,7 +49,7 @@ router.post(
 					.json({ errors: [{ msg: 'Invalid Credentials' }] });
 			}
 
-			//Compare to see the passwords match
+			//Compare to see if the passwords match
 			const isMatch = await bcrypt.compare(password, user.password);
 
 			if (!isMatch) {
@@ -59,7 +61,7 @@ router.post(
 			//get the payload
 			const payload = {
 				user: {
-					id: user.id,
+					id: user.id, //extracting the id property from the user object obtained from the database query, and passing only this id as the payload.
 				},
 			};
 

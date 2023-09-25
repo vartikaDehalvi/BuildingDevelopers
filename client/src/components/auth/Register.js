@@ -72,7 +72,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 					</p>
 					<form className="form" onSubmit={(e) => onSubmit(e)}>
 						{alerts.map((alert) => (
-							<div key={alert.id} className={`alert alert-${alert.alertType}`}>
+							<div
+								key={alert.id}
+								style={{ fontSize: '80%' }}
+								className={`alert alert-${alert.alertType}`}
+							>
 								{alert.msg}
 							</div>
 						))}

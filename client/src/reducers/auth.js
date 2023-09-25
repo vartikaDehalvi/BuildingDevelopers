@@ -10,7 +10,7 @@ import {
 } from '../actions/types';
 
 const initialState = {
-	token: localStorage.getItem('token'),
+	token: localStorage.getItem('token'), //getItem() Returns the current value associated with the given key, or null if the given key does not exist.
 	isAuthenticated: null,
 	loading: true,
 	user: null,

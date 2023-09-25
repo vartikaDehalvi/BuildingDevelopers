@@ -44,7 +44,11 @@ const Login = ({ login, isAuthenticated }) => {
 				</p>
 				<form className="form" onSubmit={(e) => onSubmit(e)}>
 					{alerts.map((alert) => (
-						<div key={alert.id} className={`alert alert-${alert.alertType}`}>
+						<div
+							style={{ fontSize: '80%' }}
+							key={alert.id}
+							className={`alert alert-${alert.alertType}`}
+						>
 							{alert.msg}
 						</div>
 					))}

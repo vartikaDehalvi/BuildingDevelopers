@@ -12,7 +12,7 @@ import {
 } from './types';
 import setAuthToken from '../utils/setAuthToken';
 
-//Load User
+//Load User if it already has the token
 export const loadUser = () => async (dispatch) => {
 	if (localStorage.token) setAuthToken(localStorage.token);
 
@@ -32,6 +32,7 @@ export const loadUser = () => async (dispatch) => {
 //Register
 export const register =
 	({ name, email, password }) =>
+	// 1. Set the request headers for the API call.
 	async (dispatch) => {
 		const config = {
 			headers: {
@@ -39,6 +40,7 @@ export const register =
 			},
 		};
 
+		// 2. Prepare the request body as a JSON string.
 		const body = JSON.stringify({
 			name,
 			email,
@@ -97,7 +99,7 @@ export const login = (email, password) => async (dispatch) => {
 	} catch (err) {
 		const errors = err.response.data.errors;
 		if (errors) {
-			errors.forEach((error) => dispatch(setAlert(error.message, 'danger')));
+			errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
 		}
 
 		dispatch({ type: LOGIN_FAIL });

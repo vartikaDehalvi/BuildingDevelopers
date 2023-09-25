@@ -10,11 +10,12 @@ import { UserModel } from '../../models/User.js';
 
 const router = express.Router();
 
+//REGISTER USER
 router.post(
 	'/',
-	/*validation middleware*/
+	/*express-validation middleware*/
 	[
-		check('name', 'Name is required').not().isEmpty(),
+		check('name', 'Name is required').notEmpty(),
 		check('email', 'Email is required').isEmail(),
 		check(
 			'password',
@@ -71,7 +72,7 @@ router.post(
 			jwt.sign(
 				payload,
 				process.env.JWT_SECRET,
-				{ expiresIn: 3600000000000000 },
+				{ expiresIn: 3600 },
 				(err, token) => {
 					//if error occurs
 					if (err) throw err;
