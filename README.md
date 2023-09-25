@@ -14,10 +14,9 @@ This README file will guide you through using the project.
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Installation](#installation)
 
-## Features
+# Features
 
 - User Registration and Login
 - Dashboard
@@ -25,7 +24,7 @@ This README file will guide you through using the project.
 - Post Creation, Liking, and Commenting
 - About Page
 
-## Prerequisites
+# Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
@@ -33,16 +32,16 @@ Before you begin, ensure you have met the following requirements:
 - MongoDB installed and running
 - Git for version control
 
-## Usage
+# Usage
 
 To use Build Dev, follow these steps:
 
-- Register an account and log in to access the dashboard.
-- Create and manage your developer profile, including education, experience, and social links.
-- Create, like, and comment on posts or delete your post.
+- Register an account or log in to access the dashboard.
+- Create and manage your profile, including education, experience and social links and also view others' profile.
+- Create, like, comments or delete posts.
 - Explore the About page to learn more about the company.
 
-## Contributing
+# Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
@@ -51,7 +50,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 - Make your changes and test thoroughly.
 - Submit a pull request with a clear description of your changes.
 
-## Installation
+# Installation
 
 To get started with Build Dev:
 
@@ -63,7 +62,7 @@ To get started with Build Dev:
 - Return to the project root: `cd ..`
 - Start the server and client concurrently: `npm run dev`
   
-  ## Key Dependencies
+  # Key Dependencies
 
   Build Dev relies on several key libraries and packages:
 
