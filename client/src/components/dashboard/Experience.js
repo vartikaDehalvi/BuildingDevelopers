@@ -29,15 +29,19 @@ const Experience = ({ experience, deleteExperience }) => {
 	return (
 		<div style={{ textAlign: 'center' }}>
 			<h2 className="my-2"> Experience Credentials</h2>
-			<table style={{ textAlign: 'center' }}>
-				<tr className="table-tr">
-					<th>Company</th>
-					<th>Title</th>
-					<th>Years</th>
-					<th>Action</th>
-				</tr>
-				{experiences}
-			</table>
+			{experience.length > 0 ? (
+				<table style={{ textAlign: 'center' }}>
+					<tr className="table-tr">
+						<th>Company</th>
+						<th>Title</th>
+						<th>Years</th>
+						<th>Action</th>
+					</tr>
+					{experiences}
+				</table>
+			) : (
+				<div style={{ fontSize: '100%' }}>Add Experience Details</div>
+			)}
 		</div>
 	);
 };

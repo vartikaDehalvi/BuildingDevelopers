@@ -790,6 +790,9 @@ td {
 }
 
 @media (max-width: 740px) {
+	.register-form-container {
+		margin-top: 20%;
+	}
 	.dash-buttons > .btn {
 		font-size: 77%;
 	}

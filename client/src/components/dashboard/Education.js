@@ -29,16 +29,20 @@ const Education = ({ education, deleteEducation }) => {
 	return (
 		<div style={{ textAlign: 'center' }}>
 			<h2 className="my-2"> Education Credentials</h2>
-			<table>
-				<tr className="table-tr" style={{ width: '100%' }}>
-					<th style={{ width: '25%' }}>School</th>
-					<th style={{ width: '25%' }}>Degree</th>
-					<th style={{ width: '25%' }}>Years</th>
-					<th style={{ width: '25%' }}>Action</th>
-				</tr>
+			{education.length > 0 ? (
+				<table>
+					<tr className="table-tr" style={{ width: '100%' }}>
+						<th style={{ width: '25%' }}>School</th>
+						<th style={{ width: '25%' }}>Degree</th>
+						<th style={{ width: '25%' }}>Years</th>
+						<th style={{ width: '25%' }}>Action</th>
+					</tr>
 
-				<tbody>{educations}</tbody>
-			</table>
+					<tbody>{educations}</tbody>
+				</table>
+			) : (
+				<div style={{ fontSize: '100%' }}>Add Education Details</div>
+			)}
 		</div>
 	);
 };
